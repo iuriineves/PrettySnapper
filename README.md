@@ -1,34 +1,11 @@
-# prettyshot
+![PrettySnapper Logotype](https://github.com/iuriineves/PrettySnapper/assets/60155360/7e8cdd99-d703-4a8c-b402-e9229d0714a3)
 
-An Electron application with React and TypeScript
+![image](https://github.com/iuriineves/PrettySnapper/assets/60155360/e4aa1c56-d1f1-4561-9b9d-cbd69e0b2e7e)
 
-## Recommended IDE Setup
+![image](https://github.com/iuriineves/PrettySnapper/assets/60155360/a5d91bc6-a7e9-4adf-b628-77085cf8e290)
 
-- [VSCode](https://code.visualstudio.com/) + [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) + [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
+## How to use PrettySnapper
 
-## Project Setup
+## Why PrettySnapper
 
-### Install
-
-```bash
-$ npm install
-```
-
-### Development
-
-```bash
-$ npm run dev
-```
-
-### Build
-
-```bash
-# For windows
-$ npm run build:win
-
-# For macOS
-$ npm run build:mac
-
-# For Linux
-$ npm run build:linux
-```
+## Supporting PrettySnapper
