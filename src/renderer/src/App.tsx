@@ -2,11 +2,8 @@ import Sidebar from './components/sidebar'
 import { ThemeProvider } from './components/theme-provider'
 import Topbar from './components/topbar'
 import light_bg from './assets/bg.png'
-import ss from './assets/cropped.png'
 import { useState } from 'react'
-import { getImage } from './assets/get_image'
-const { clipboard } = require('electron')
-const fs = require('fs')
+import Ssarea from './components/ssarea'
 
 function App(): JSX.Element {
   const [padding, setPadding] = useState(10)
@@ -27,33 +24,14 @@ function App(): JSX.Element {
         ></Sidebar>
         <div className="flex w-[-webkit-fill-available] items-center justify-center">
           <div className=" mx-5 mt-8 flex items-center justify-center relative">
-            <div id="ss_area" className="h-auto w-auto flex items-center justify-center relative">
-              <img
-                src={background}
-                className="w-[-webkit-fill-available] h-auto rounded-md max-h-[37rem]"
-              />
-              <img
-                id="ss"
-                src={ss}
-                alt=""
-                onLoad={async () => {
-                  const buffer = clipboard.readImage('clipboard')
-                  fs.writeFile('./src/renderer/src/assets/clipboard.png', buffer.toPNG(), (err) => {
-                    if (err) console.log(err)
-                  })
-                  setColor(await getImage())
-                }}
-                className={'absolute shadow-2xl shadow-black'}
-                style={{
-                  backgroundClip: 'border-box',
-                  borderColor: `rgb(${color[0]}, ${color[1]}, ${color[2]})`,
-                  borderWidth: `${padding}px`,
-                  borderRadius: `${radius}px`,
-                  width: `${inset}%`,
-                  height: 'auto'
-                }}
-              />
-            </div>
+            <Ssarea
+              padding={padding}
+              radius={radius}
+              inset={inset}
+              color={color}
+              setColor={setColor}
+              background={background}
+            />
           </div>
         </div>
       </div>

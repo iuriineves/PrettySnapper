@@ -37,16 +37,7 @@ export default function Sidebar({ setPadding, setRadius, setInset, setBackground
               <div className="material-symbols-rounded text-neutral-600 text-2xl">delete</div>
             </div>
             <Separator className="my-5 bg-neutral-300 dark:bg-neutral-600/50"></Separator>
-            <p className="font-Noto my-5">Padding</p>
-            <Slider
-              defaultValue={[10]}
-              min={0}
-              max={50}
-              onValueChange={(v) => {
-                setPadding(v)
-              }}
-            ></Slider>
-            <p className="font-Noto my-5">Inset</p>
+            <p className="font-Noto my-5">Size</p>
             <Slider
               defaultValue={[50]}
               min={25}
@@ -55,35 +46,52 @@ export default function Sidebar({ setPadding, setRadius, setInset, setBackground
                 setInset(v)
               }}
             ></Slider>
-            <p className="font-Noto my-5">Border Radius</p>
-            <Slider
-              defaultValue={[10]}
-              min={0}
-              max={20}
-              onValueChange={(v) => {
-                setRadius(v)
-              }}
-            ></Slider>
+            <div className="flex w-full gap-3">
+              <div className="w-[-webkit-fill-available]">
+                <p className="font-Noto my-5">Padding</p>
+                <Slider
+                  defaultValue={[10]}
+                  min={0}
+                  max={50}
+                  onValueChange={(v) => {
+                    setPadding(v)
+                  }}
+                ></Slider>
+              </div>
+
+              <div className="w-[-webkit-fill-available]">
+                <p className="font-Noto my-5">Border Radius</p>
+                <Slider
+                  defaultValue={[10]}
+                  min={0}
+                  max={20}
+                  onValueChange={(v) => {
+                    setRadius(v)
+                  }}
+                ></Slider>
+              </div>
+            </div>
+
             <p className="font-Noto my-5">Background</p>
             <div className="w-[-webkit-fill-available] flex flex-wrap gap-1">
               <Button
-                className=" p-9"
+                className="p-9"
                 style={{ background: `url(${light_bg})`, backgroundSize: 'cover' }}
                 onClick={() => {
                   setBackground(light_bg)
                 }}
               ></Button>
               <Button
-                className=" p-9"
+                className="p-9"
                 style={{ background: `url(${dark_bg})`, backgroundSize: 'cover' }}
                 onClick={() => {
                   setBackground(dark_bg)
                 }}
               ></Button>
-              <Button className=" p-9"></Button>
-              <Button className=" p-9"></Button>
-              <Button className=" p-9"></Button>
-              <Button className=" p-9"></Button>
+              <Button className="p-9"></Button>
+              <Button className="p-9"></Button>
+              <Button className="p-9"></Button>
+              <Button className="p-9"></Button>
             </div>
             <div className="absolute bottom-5 gap-2 flex">
               <Button className="flex justify-center items-center pr-3 pl-2">

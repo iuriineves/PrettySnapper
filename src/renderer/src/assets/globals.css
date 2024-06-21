@@ -74,7 +74,7 @@ body {
     @apply bg-background/75 text-foreground;
 }
 }
-body {
+* {
     @apply font-Noto;
 }
 
